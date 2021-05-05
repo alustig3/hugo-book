@@ -1,0 +1,6 @@
+{{ $file := .Get "filename" }}
+{{ $text := .Get "text" }}
+
+<a href="{{ $file }}" download >
+    <i class="fa fa-download"></i> {{ $text }}
+</a>
