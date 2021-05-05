@@ -1,3 +1,4 @@
+This a fork of the Hugo Book Theme. The upstream repository can be found here: https://github.com/alex-shpak/hugo-book
 # Hugo Book Theme
 
 [![Hugo](https://img.shields.io/badge/hugo-0.68-blue.svg)](https://gohugo.io)
