@@ -14,6 +14,14 @@ a.book-btn:hover{
     font-weight: 700;
 }
 
+.markdown h2{
+    border-bottom: 2px solid lightgrey;
+}
+
+.markdown h1{
+    text-align: center;
+}
+
 .markdown table tr th, .markdown table tr td {
     padding: .25rem 1rem;
 }
