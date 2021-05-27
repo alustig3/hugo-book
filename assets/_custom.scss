@@ -109,6 +109,10 @@ aside nav ul li {
     font-size: $font-size-14;
 }
 
+.markdown .book-hint {
+    border-left: 10px solid;
+
+}
 
 .markdown .book-hint.info {
     background-color: rgba(102,187,255,.25);
