@@ -1,4 +1,13 @@
-This a fork of the Hugo Book Theme. The upstream repository can be found here: https://github.com/alex-shpak/hugo-book
+This is a fork of the Hugo Book Theme. The upstream repository can be found here: https://github.com/alex-shpak/hugo-book
+
+go to project root directory
+```
+hugo new site hugo
+git submodule add https://github.com/alustig3/hugo-book.git themes/book
+mkdir hugo/content/docs
+touch hugo/content/_index.md
+```
+
 # Hugo Book Theme
 
 [![Hugo](https://img.shields.io/badge/hugo-0.68-blue.svg)](https://gohugo.io)
