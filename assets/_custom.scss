@@ -51,13 +51,7 @@ a.book-btn:hover{
     border-radius: inherit;
 }
 
-.prev{
-    text-align: left;
-}
-.next{
-    text-align: right;
-    float:right;
-}
+
 
 #TableOfContents{
     padding: 5px 0px 5px 5px;
@@ -133,9 +127,28 @@ markdown .book-hint.danger {
 
 .book-brand:hover{
     color:var(--color-link);
+}
 
 .below{
     position: absolute;
 	bottom: 5rem;
 }
+
+.chapter_btns{
+    display: grid;
+    grid-template-columns: 48% auto 48%;
+    grid-template-areas:
+    "prevChap . nxtChap";
+}
+
+.prev{
+    text-align: left;
+    grid-area: prevChap;
+    width: 100%;
+}
+.next{
+    text-align: right;
+    width: 100%;
+    grid-area: nxtChap;
+    float: right;
 }
