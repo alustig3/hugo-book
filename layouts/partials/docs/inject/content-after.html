@@ -1,0 +1,22 @@
+<div class="chapter_btns">
+    
+    {{ if .Page.Params.prev_txt }}
+        {{ $text := .Page.Params.prev_txt }}
+        {{ $link := .Page.Params.prev_link }}
+
+        <a class="btn-nav prev" href= {{ ref . $link }}>
+            <i style="font-size: 1rem;">previous</i><br><i class="fas fa-arrow-left"></i> {{ $text }}</i>
+        </a>
+    {{ end }}
+    
+    
+    {{ if .Page.Params.next_txt }}
+        {{ $text := .Page.Params.next_txt }}
+        {{ $link := .Page.Params.next_link }}
+
+        <a class="btn-nav next" href= {{ ref . $link }} >
+            <i style="font-size: 1rem;">next</i><br>{{ $text }} <i class="fas fa-arrow-right"></i></i>
+        </a>
+    {{ end }}
+
+</div>

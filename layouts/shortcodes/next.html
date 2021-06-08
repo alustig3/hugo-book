@@ -1,7 +1,0 @@
-{{ $link := .Get "link" }}
-{{ $text := .Get "text" }}
-
-<a class="btn-nav next" href= {{ ref . $link }} >
-    <i style="font-size: 1rem;">next</i><br>{{ $text }} <i class="fas fa-arrow-right"></i></i>
-</a>
-<br>
