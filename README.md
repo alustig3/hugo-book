@@ -3,9 +3,33 @@ This is a fork of the Hugo Book Theme. The upstream repository can be found here
 go to project root directory
 ```
 hugo new site hugo
-git submodule add https://github.com/alustig3/hugo-book.git themes/book
+git submodule add https://github.com/alustig3/hugo-book.git hugo/themes/book
 mkdir hugo/content/docs
 touch hugo/content/_index.md
+```
+put the following in 
+```
+baseURL = "Github pages URL"
+title = ""
+languageCode = "en-us"
+publishDir = "../docs/"
+theme = "book"
+
+[params]
+  BookSearch = false
+  BookTheme = 'light'
+  BookRepo =  'Repo URL'
+  
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+
+  [markup.highlight] 
+      style = 'friendly'
 ```
 
 # Hugo Book Theme
