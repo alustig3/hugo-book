@@ -116,8 +116,11 @@ ul.pagination {
 
   a.active {
     color: var(--color-link);
+    &::before { 
+      content: "- ";
+    }
     &::after { 
-      content: " «";
+      content: " -";
     }
   }
 

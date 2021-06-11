@@ -140,9 +140,6 @@ markdown .book-hint.danger {
     font-size: .85em;
 }
 
-.book-brand{
-    text-align: center;
-}
 .book-brand:hover{
     color:var(--color-link);
 }
@@ -150,6 +147,7 @@ markdown .book-hint.danger {
 .below{
     position: absolute;
 	bottom: 5rem;
+    text-align: left;
 }
 
 .chapter_btns{
@@ -190,4 +188,8 @@ markdown .book-hint.danger {
 .book-page{
     padding-top: 1rem;
     padding-bottom: 0px;
+}
+
+.book-menu-content{
+    text-align: center;
 }
