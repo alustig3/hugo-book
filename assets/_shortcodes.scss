@@ -30,6 +30,7 @@
     margin-top: $padding-16;
     margin-bottom: $padding-16;
 
+    background: var(--gray-100);
     border: $padding-1 solid var(--gray-200);
     border-radius: $border-radius;
 
@@ -45,16 +46,22 @@
       cursor: pointer;
     }
 
+    label:hover{
+      background: var(--gray-200);
+    }
+
     .book-tabs-content {
       order: 999; //Move content blocks to the end
       width: 100%;
       border-top: $padding-1 solid var(--gray-100);
       padding: $padding-16;
       display: none;
+      background: white;
     }
 
     input[type="radio"]:checked + label {
       border-bottom: $padding-1 solid var(--color-link);
+      color: var(--color-link);
     }
     input[type="radio"]:checked + label + .book-tabs-content {
       display: block;
