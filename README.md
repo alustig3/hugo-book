@@ -72,6 +72,7 @@ theme = "book"
 
 ## Installation
 
+### Install as git submodule
 Navigate to your hugo project root and run:
 
 ```
@@ -82,6 +83,30 @@ Then run hugo (or set `theme = "book"`/`theme: book` in configuration file)
 
 ```
 hugo server --minify --theme book
+```
+
+### Install as hugo module
+
+You can also add this theme as a Hugo module instead of a git submodule.
+
+Start with initializing hugo modules, if not done yet:
+```
+hugo mod init github.com/repo/path
+```
+
+Navigate to your hugo project root and add [module] section to your `config.toml`:
+
+```toml
+[module]
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
+```
+
+Then, to load/update the theme module and run hugo:
+
+```sh
+hugo mod get -u
+hugo server --minify
 ```
 
 ### Creating site from scratch
@@ -106,7 +131,7 @@ hugo server --minify --theme book
 By default, the theme will render pages from the `content/docs` section as a menu in a tree structure.  
 You can set `title` and `weight` in the front matter of pages to adjust the order and titles in the menu.
 
-### Leaf bundle menu
+### Leaf bundle menu (Deprecated)
 
 You can also use leaf bundle and the content of its `index.md` file as menu.  
 Given you have the following file structure:
@@ -197,7 +222,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
   BookRepo = 'https://github.com/alex-shpak/hugo-book'
-  
+
   # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
   # type.
   # Required if 'BookRepo' param is set.
@@ -273,9 +298,11 @@ bookSearchExclude = true
 
 ### Partials
 
-There are few empty partials you can override in `layouts/partials/`
+There are layout partials available for you to easily override components of the theme in `layouts/partials/`.
 
-| Partial                                            | Placement                                   |
+In addition to this, there are several empty partials you can override to easily add/inject code.
+
+| Empty Partial                                      | Placement                                   |
 | -------------------------------------------------- | ------------------------------------------- |
 | `layouts/partials/docs/inject/head.html`           | Before closing `<head>` tag                 |
 | `layouts/partials/docs/inject/body.html`           | Before closing `<body>` tag                 |
@@ -323,13 +350,13 @@ In fact almost empty not quite empty because an empty file looks like absent for
 
 ## Shortcodes
 
-- [Buttons](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/buttons/)
-- [Columns](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/columns/)
-- [Expand](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/expand/)
-- [Hints](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/hints/)
-- [KaTeX](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/katex/)
-- [Mermaid](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/mermaid/)
-- [Tabs](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/tabs/)
+- [Buttons](https://hugo-book-demo.netlify.app/docs/shortcodes/buttons/)
+- [Columns](https://hugo-book-demo.netlify.app/docs/shortcodes/columns/)
+- [Details](https://hugo-book-demo.netlify.app/docs/shortcodes/details/)
+- [Hints](https://hugo-book-demo.netlify.app/docs/shortcodes/hints/)
+- [KaTeX](https://hugo-book-demo.netlify.app/docs/shortcodes/katex/)
+- [Mermaid](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid/)
+- [Tabs](https://hugo-book-demo.netlify.app/docs/shortcodes/tabs/)
 
 By default, Goldmark trims unsafe outputs which might prevent some shortcodes from rendering. It is recommended to set `markup.goldmark.renderer.unsafe=true` if you encounter problems.
 
