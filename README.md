@@ -6,8 +6,9 @@ hugo new site hugo
 git submodule add https://github.com/alustig3/hugo-book.git hugo/themes/book
 mkdir hugo/content/docs
 touch hugo/content/_index.md
+touch hugo/config.toml
 ```
-put the following in 
+put the following in `config.toml` 
 ```
 baseURL = "Github pages URL"
 title = ""
